@@ -7,9 +7,10 @@ jobs:
     steps:
       - name: Hello world action step
         id: hello
-        uses: abrahamNtd/poc-git-action-python@v2
+        uses: abrahamNtd/poc-git-action-python@v3
         with:
-          who-to-greet: 'Mona the Octocat'
+          python-action: 'create zip'
+          python-user: 'admin'
       # Use the output from the `hello` step
       - name: Get the output time
         run: echo "The time was ${{ steps.hello.outputs.time }}"
