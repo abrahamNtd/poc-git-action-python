@@ -6,8 +6,8 @@ jobs:
     name: python running form Docker
     steps:
       - name: create zip file
-        id: create zip
+        id: create_zip
         uses: abrahamNtd/poc-git-action-python@v5
         with:
-          python-action: 'create_zip'
+          python-action: 'create zip'
           python-user: 'admin'
