@@ -17,7 +17,7 @@ jobs:
           cat list.txt
       - name: create zip file
         id: create_zip
-        uses: abrahamNtd/poc-git-action-python@v15
+        uses: abrahamNtd/poc-git-action-python@v16
         with:
           python-action: 'create a zip file'
           python-user: 'admin'
