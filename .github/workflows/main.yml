@@ -5,19 +5,20 @@ jobs:
     runs-on: ubuntu-latest
     name: python running form Docker
     steps:
-      - name: Checkout repository
+      - name: Checkout project repository
         uses: actions/checkout@v3
         with:
           fetch-depth: 2
-      - name: Get changed files
-        id: changes
+      - name: Get changed files on the last commit
+        id: changes_files
         run: |
-          git diff --name-only --diff-filter=ACMRT HEAD~1 HEAD
           git diff --name-only --diff-filter=ACMRT HEAD~1 HEAD > list.txt
           cat list.txt
-      - name: create zip file
-        id: create_zip
-        uses: abrahamNtd/poc-git-action-python@v16
+      - name: Deploy to environment
+        id: depoy_files
+        uses: abrahamNtd/poc-git-action-python@v17
         with:
-          python-action: 'create a zip file'
           python-user: 'admin'
+          python-password: 'admin'
+          bastion-host: '255.255.255.255'
+          remote-host: '255.255.255.255'
