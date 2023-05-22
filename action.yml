@@ -9,3 +9,8 @@ inputs:
     description: 'the user name'
     required: true
     default: 'guest'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.python-action }} ${{ inputs.python-user }}
