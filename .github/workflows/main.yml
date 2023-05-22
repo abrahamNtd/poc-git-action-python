@@ -11,5 +11,5 @@ jobs:
           myInput: this is the input jajajaja
           anotherInput: optional
       - name: Check outputs
-        run: |
-        echo "Outputs - ${{ steps.myaction.outputs.myOutput }}"
+          run: |
+          echo "Outputs - ${{ steps.myaction.outputs.myOutput }}"
