@@ -1,10 +1,14 @@
-name: 'Hello World'
-description: 'Greet someone and record the time'
+name: 'Docker Python action'
+description: 'this action executes a python script using a docker container'
 inputs:
-  who-to-greet:  # id of input
-    description: 'Who to greet'
+  python-action:  
+    description: 'the name of the python function to be execute'
     required: true
-    default: 'World'
+    default: 'echo'
+  python-user:  
+    description: 'the user name'
+    required: false
+    default: 'guest'
 outputs:
   time: # id of output
     description: 'The time we greeted you'
@@ -12,4 +16,4 @@ runs:
   using: 'docker'
   image: 'Dockerfile'
   args:
-    - ${{ inputs.who-to-greet }}
+    - ${{ inputs.python-action }}
