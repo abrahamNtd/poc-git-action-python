@@ -1,17 +1,18 @@
 name: 'Docker Python action'
 description: 'this action executes a python script using a docker container'
 inputs:
-  python-action:  
-    description: 'the name of the python function to be execute'
-    required: true
-    default: 'echo'
   python-user:  
+    description: 'the user password'
+    required: true
+  python-password:  
     description: 'the user name'
     required: true
-    default: 'guest'
+  bastion-host:  
+    description: 'the bastion host IP adress'
+    required: true
+  remote-host:  
+    description: 'the remote host IP adress'
+    required: true
 runs:
   using: 'docker'
   image: 'Dockerfile'
-  args:
-    - ${{ inputs.python-action }}
-    - ${{ inputs.python-user }}
