@@ -9,5 +9,5 @@ jobs:
         id: create_zip
         uses: abrahamNtd/poc-git-action-python@v8
         with:
-          python-action: 'create zip'
+          python-action: 'create a zip file'
           python-user: 'admin'
