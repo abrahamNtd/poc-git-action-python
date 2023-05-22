@@ -7,7 +7,7 @@ jobs:
     steps:
       - name: create zip file
         id: create_zip
-        uses: abrahamNtd/poc-git-action-python@v11
+        uses: abrahamNtd/poc-git-action-python@v12
         with:
           python-action: 'create a zip file'
           python-user: 'admin'
