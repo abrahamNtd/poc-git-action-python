@@ -10,4 +10,4 @@ COPY main.py /app/main.py
 
 RUN chmod +x /app/main.py
 
-CMD ["python", "/app/main.py"]
+ENTRYPOINT ["python", "/app/main.py"]
