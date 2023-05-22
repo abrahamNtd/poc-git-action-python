@@ -3,14 +3,11 @@ on: [push]
 jobs:
   hello_world_job:
     runs-on: ubuntu-latest
-    name: A job to say hello
+    name: python running form Docker
     steps:
-      - name: Hello world action step
-        id: hello
-        uses: abrahamNtd/poc-git-action-python@v3
+      - name: create zip file
+        id: create zip
+        uses: abrahamNtd/poc-git-action-python@v4
         with:
           python-action: 'create zip'
           python-user: 'admin'
-      # Use the output from the `hello` step
-      - name: Get the output time
-        run: echo "The time was ${{ steps.hello.outputs.time }}"
