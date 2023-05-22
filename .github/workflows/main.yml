@@ -10,6 +10,3 @@ jobs:
         with:
           myInput: this is the input jajajaja
           anotherInput: optional
-      - name: Check outputs
-          run: |
-          echo "Outputs - ${{ steps.myaction.outputs.myOutput }}"
