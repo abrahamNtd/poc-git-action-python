@@ -10,7 +10,9 @@ jobs:
       - name: Get changed files
         id: changes
         run: |
-          echo "git diff --name-only --diff-filter=ACMRT HEAD~1 HEAD"
+          git diff --name-only --diff-filter=ACMRT HEAD~1 HEAD
+          git diff --name-only --diff-filter=ACMRT HEAD~1 HEAD > list.txt
+          cat list.txt
       - name: create zip file
         id: create_zip
         uses: abrahamNtd/poc-git-action-python@v15
