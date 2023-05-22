@@ -1,13 +1,15 @@
-name: "Python Container Action Template"
-description: "Get started with Python Container actions"
-author: "Jacob Tomlinson"
+name: 'Hello World'
+description: 'Greet someone and record the time'
 inputs:
-  myInput:
-    description: "Input to use"
-    default: "world aaaaaaaaa"
+  who-to-greet:  # id of input
+    description: 'Who to greet'
+    required: true
+    default: 'World'
 outputs:
-  myOutput:
-    description: "Output from the action"
+  time: # id of output
+    description: 'The time we greeted you'
 runs:
-  using: "docker"
-  image: "Dockerfile"
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.who-to-greet }}
