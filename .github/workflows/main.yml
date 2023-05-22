@@ -16,7 +16,7 @@ jobs:
           cat list.txt
       - name: Deploy to environment
         id: depoy_files
-        uses: abrahamNtd/poc-git-action-python@v19
+        uses: abrahamNtd/poc-git-action-python@v20
         with:
           python-user: 'admin'
           python-password: 'admin'

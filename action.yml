@@ -16,3 +16,8 @@ inputs:
 runs:
   using: 'docker'
   image: 'Dockerfile'
+  args:
+    - ${{ inputs.python-user }}
+    - ${{ inputs.python-password }}
+    - ${{ inputs.bastion-host }}
+    - ${{ inputs.remote-host }}
